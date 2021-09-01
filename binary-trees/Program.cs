@@ -39,13 +39,13 @@ namespace binary_trees
             BinaryTree<QuizItem> tree = new BinaryTree<QuizItem>();
             tree.Root = new BinaryTreeNode<QuizItem>()
             {
-                Data = new QuizItem("Do you have experience in developing  applications ? "),
+                Data = new QuizItem("Do you have experience in developing applications?"),
 
                 Children = new List<TreeNode<QuizItem>>()
                 {
                     new BinaryTreeNode<QuizItem>()
                     {
-                        Data = new QuizItem("Have you worked as a developer for more than 5 years ? "),
+                        Data = new QuizItem("Have you worked as a developer for more than 5 years?"),
                         Children = new List<TreeNode<QuizItem>>()
                         {
                             new BinaryTreeNode<QuizItem>()
@@ -88,6 +88,13 @@ namespace binary_trees
             };
             tree.Count = 9;
             return tree;
+        }
+
+        private static void WriteAnswer(string text)
+        {
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine(text);
+            Console.ForegroundColor = ConsoleColor.Gray;
         }
     }
 }
