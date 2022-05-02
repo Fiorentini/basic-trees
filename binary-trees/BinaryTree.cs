@@ -22,6 +22,9 @@ namespace binary_trees
                 case TraversalEnum.POSTORDER:
                     TraversePostOrder(Root, nodes);
                     break;
+                case TraversalEnum.CUSTOM:
+                    TraverseCustom(Root, nodes);
+                    break;
             }
             return nodes;
         }
@@ -64,6 +67,16 @@ namespace binary_trees
                 TraversePostOrder(node.Left, result);
                 TraversePostOrder(node.Right, result);
                 result.Add(node);
+            }
+        }
+
+        private void TraverseCustom(BinaryTreeNode<T> node, List<BinaryTreeNode<T>> result)
+        {
+            if (node != null)
+            {
+                result.Add(node);
+                TraverseCustom(node.Right, result);
+                TraverseCustom(node.Left, result);
             }
         }
     }

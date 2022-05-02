@@ -4,6 +4,7 @@
     {
         PREORDER,
         INORDER,
-        POSTORDER
+        POSTORDER,
+        CUSTOM
     }
 }
